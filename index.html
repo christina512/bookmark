@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+ <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="text-center py-4 position-relative">Bookmarker</h1>
+            <div class="book-mark w-100">
+                <h2 class="text-center pt-4 h2">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="py-4">
+                    <label for="siteName" class="pb-2 fw-semibold" ><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input id="siteName" type="text" class="form-control" oninput="siteNameTyping()" placeholder="Bookmark name">
+                    <span class="d-none text-danger" id="name-validation">Site name must contain at least 3 characters</span>
+                </div>
+                <div>
+                    <label for="siteURL" class="pb-2 fw-semibold"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input id="siteURL" type="text" class="form-control" oninput="siteUrlTyping()" placeholder="Website URL">
+                    <span class="d-none text-danger" id="url-validation">Website URL must be like (www.example.com)</span>
+                </div>
+                <div class="text-center py-4"><button class="btn btn-submit" onclick="addBookmark()">submit</button></div>
+            </div>
+            <table class="table bg-light mt-5 text-center">
+                <thead class="">
+                    <th>Index</th>
+                    <th>Website name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="bookmarkData">
+
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+
+
+
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
